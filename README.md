@@ -1,2 +1,2 @@
-# Machine Learning 
-## From Zero To Hero
+# A Deep Dive into Machine Learning Models
+
