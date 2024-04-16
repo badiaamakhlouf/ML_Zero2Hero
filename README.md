@@ -1,5 +1,4 @@
-# Ascending the Machine Learning Pyramid
-## A Deep Dive into Machine Learning Models
+# A Deep Dive into Machine Learning Models
 
 🎉 Welcome to my **Machine Learning Zero to Hero** repository, your gateway to unlocking expertise and discovering everything you need to become a proficient Machine Learning Engineer or Data Science Expert.
 
