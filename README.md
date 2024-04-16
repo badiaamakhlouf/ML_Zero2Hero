@@ -59,4 +59,7 @@ Let's begin! 🚀
 - Time Series Analysis.
 Natural Language Processing (NLP).
 ## 9- Conclusion
+- Recap of key concepts covered.
+- Importance of continuous learning in machine learning.
+- Future directions and trends in the field.
 
