@@ -32,6 +32,6 @@ Here is some advices :
   - If your model uses a single feature, such as the Occupancy rate then you can plot it: y(indoor air quality) versus x(Occupancy rate).
   - If your model uses more than one feature : $x_1, x_2, x_3$ etc. Then plotting it, will be critical somehow.
 
- - **Classification:**
+- **Classification:**
   - Evaluation uses metrics like accuracy, precision, recall, F1-score, or AUC (Area Under the Curve) 
 
