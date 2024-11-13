@@ -22,5 +22,5 @@ Here is some advices :
 ### Q- How to evaluate your model ?
 - In case our model is performing very well on the training data but has extremely poor performance on testing dataset ==> **Overfitting**
 - If your model uses a single feature, such as the Occupancy rate then you can plot it: y(indoor air quality) versus x(Occupancy rate).
-- If your model uses more than one feature : x_1, x_2, x_3 etc. then plotting it, will be critical somehow. 
+- If your model uses more than one feature : $x_1, x_2, x_3$ etc. then plotting it, will be critical somehow. 
 
