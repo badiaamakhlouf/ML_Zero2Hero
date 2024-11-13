@@ -47,6 +47,7 @@ Let's begin! 🚀
 - Hyperparameter tuning: optimizing model parameters.
 - Cross-validation: robust model evaluation.
 - Techniques for avoiding overfitting and underfitting.
+- Model final evaluation
 ## 7- Deployment and Productionization
 - Model deployment strategies: cloud platforms, containers, APIs.
 - Monitoring and updating deployed models.
