@@ -34,9 +34,28 @@ Here is some advices :
 
 ## Model selection 
 - Choosing the best model for a given machine learning application depends on its performance on the testing data.
-- For the same dataset, we ca try various models which are the next:
-  - $f_{w,b}(x)  = w_1x +b$ ==> evaluate the testing set error
-  - $f_{w,b}(x)  = w_1x + w_2x^2 + b$ ==> evaluate the testing set error
-  - $f_{w,b}(x)  = w_1x +w_2x^2+ w_3x^3+ b$ ==> evaluate the testing set error
-  - etc.
+- Several methods can be adopted before selecting the final model, this step is called model tunning and optimization.
+- Here are the list of methods:
+   - Cross- validation set and techniques 
+   - Parameters and hyperparameters tunning.
 
+### Cross- validation set and techniques
+#### Cross- validation set
+- Cross validation set aims to split our data as follow : 60% for training, 20% for cross validation and 20 for testing
+- It can be called cross-validation set or validation set or development set or dev set.
+- Cross validation set is a small portion of data used to check the validity of the model during training.
+- In this case we evaluate the next three errors:
+  - Training error
+  - Cross validation error
+  - Test error
+- For example, we can train various models on the same dataset:
+  - $f_{w,b}(x)  = w_1x +b$ ==> evaluate the validation set error
+  - $f_{w,b}(x)  = w_1x + w_2x^2 + b$ ==> evaluate the validation set error
+  - $f_{w,b}(x)  = w_1x +w_2x^2+ w_3x^3+ b$ ==> evaluate the validation set error
+  - etc.
+- For example we can say that the third model, which has d=3 (degree of polynomial) is the best as it gives the lowest validation set error.
+- As a next step, we estimate the generalization error using the test set and if we get good performance then, we pick this model as our final model.
+- The same approach could be considered to choose the adequate neural network architecture.
+
+#### Cross- validation techniques
+- and hence can help preventing model overfitting
