@@ -18,7 +18,7 @@ Let's begin! 🚀
  8. Advanced Topics
  9. Conclusion
 
-## [1- Introduction to Machine Learning](pages/model_tunning_optim.md)
+## [1- Introduction to Machine Learning](pages/introduction_to_ml.md)
 - What is machine learning?
 - Why is machine learning important?
 - Basic concepts and terminology (e.g., algorithms, models, predictions).
@@ -43,7 +43,7 @@ Let's begin! 🚀
 - Techniques for creating and selecting relevant features.
 - Importance of feature engineering in model performance.
 - Feature scaling and normalization.
-## 6- Model Tuning and Optimization
+## [6- Model Evaluation and selection](pages/model_tunning_optim.md)
 - Hyperparameter tuning: optimizing model parameters.
 - Cross-validation: robust model evaluation.
 - Techniques for avoiding overfitting and underfitting.
