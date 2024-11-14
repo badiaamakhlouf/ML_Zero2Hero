@@ -33,11 +33,11 @@ Here is some advices :
   - Generally, to evaluate a classification model, it is more robust to evaluate the fraction of the test set and the fraction of train set that have been misclassified
 
 ## Model selection 
+- It aims to experiment with different algorithms to find the best fit for the data.
 - Choosing the best model for a given machine learning application depends on its performance on the testing data.
+- Sometimes the model can have good performance on the training data and very poor performance on the testing data ==> overfitting.
+- In order to improve the performance of the model during the training phase, it is possible to use a cross-validation set and crosss-validation techniques  
 - Several methods can be adopted before selecting the final model, this step is called model tunning and optimization.
-- Here are the list of methods:
-   - Cross- validation set and techniques 
-   - Parameters and hyperparameters tunning.
 
 ### Cross- validation set and techniques
 #### Cross- validation set
@@ -59,3 +59,20 @@ Here is some advices :
 
 #### Cross- validation techniques
 - and hence can help preventing model overfitting
+
+## Improve the performance of a Machine learning algorithm
+- To decide how to improve the performance of a ml algorithm, it is possible to run some diagnostics.
+- Bias and Variance is the most powerful diagnostic.
+
+### Bias and Variance
+
+
+
+
+- Several methods can be used to improve the performance of a machine learning model.
+- Each of these techniques can significantly impact the model's overall effectiveness.
+- Here are some common approaches:
+  - Feature Engineering: Enhance input data by creating new features or refining existing ones.
+  - Hyperparameter Tuning: Adjust model parameters to optimize performance.
+  - Regularization: Apply techniques like L2 or dropout to prevent overfitting.
+  - Ensemble Methods: Combine multiple models to achieve better accuracy.
