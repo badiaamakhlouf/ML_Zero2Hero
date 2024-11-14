@@ -1,15 +1,11 @@
-
-
-
-
-## Model evaluation 
+## Model Evaluation
 ### Q- Why model evaluation is essential in model development lifecycle ?
 - This steps comes after building your model taking into consideration the model tunning and optimization
 - What to do next ?  How to decide which decision to take while building a ml model
 Here is some advices :
  - In case you implemented a linear regression model to predcit air quality inside offices, after evaluation using one of the famous metrics such as MSE, MAE etc. you find that you still have some large errors in prediction
  - Here are some solutions :
-   - Check Overfitting 
+   - Check overfitting 
    - Increase training data size
    - Reduce the number of features
    - Try more or new sets of features such as polynomial $x^2, x^3, x_1x_2$
@@ -33,5 +29,14 @@ Here is some advices :
   - If your model uses more than one feature : $x_1, x_2, x_3$ etc. Then plotting it, will be critical somehow.
 
 - **Classification:**
-  - Evaluation uses metrics like accuracy, precision, recall, F1-score, or AUC (Area Under the Curve) 
+  - Evaluation uses metrics like accuracy, precision, recall, F1-score, or AUC (Area Under the Curve).
+  - Generally, to evaluate a classification model, it is more robust to evaluate the fraction of the test set and the fraction of train set that have been misclassified
+
+## Model selection 
+- Choosing the best model for a given machine learning application depends on its performance on the testing data.
+- For the same dataset, we ca try various models which are the next:
+  - $f_{w,b}(x)  = w_1x +b$ ==> evaluate the testing set error
+  - $f_{w,b}(x)  = w_1x + w_2x^2 + b$ ==> evaluate the testing set error
+  - $f_{w,b}(x)  = w_1x +w_2x^2+ w_3x^3+ b$ ==> evaluate the testing set error
+  - etc.
 
