@@ -8,17 +8,17 @@
 
 Let's begin! 🚀
 ## Outline 
-1- Introduction to Machine Learning
-2- Foundations of Machine Learning
-3- Supervised Learning
-4- Unsupervised Learning
-5- Feature Engineering and Selection
-6- Model Tuning and Optimization
-7- Deployment and Productionization
-8- Advanced Topics
-9- Conclusion
+ 1- Introduction to Machine Learning
+ 2- Foundations of Machine Learning
+ 3- Supervised Learning
+ 4- Unsupervised Learning
+ 5- Feature Engineering and Selection
+ 6- Model Tuning and Optimization
+ 7- Deployment and Productionization
+ 8- Advanced Topics
+ 9- Conclusion
 
-## 1- Introduction to Machine Learning
+## 1- [Introduction to Machine Learning](pages/model_tunning_optim.md)
 - What is machine learning?
 - Why is machine learning important?
 - Basic concepts and terminology (e.g., algorithms, models, predictions).
