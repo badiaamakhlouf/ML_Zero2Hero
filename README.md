@@ -43,7 +43,7 @@ Let's begin! 🚀
 - Techniques for creating and selecting relevant features.
 - Importance of feature engineering in model performance.
 - Feature scaling and normalization.
-## [6- Model Evaluation and selection](pages/model_tunning_optim.md)
+## [6- Model Evaluation and Selection](pages/model_tunning_optim.md)
 - Hyperparameter tuning: optimizing model parameters.
 - Cross-validation: robust model evaluation.
 - Techniques for avoiding overfitting and underfitting.
