@@ -18,7 +18,7 @@ Let's begin! 🚀
  8- Advanced Topics
  9- Conclusion
 
-## 1- [Introduction to Machine Learning](pages/model_tunning_optim.md)
+## [1- Introduction to Machine Learning](pages/model_tunning_optim.md)
 - What is machine learning?
 - Why is machine learning important?
 - Basic concepts and terminology (e.g., algorithms, models, predictions).
