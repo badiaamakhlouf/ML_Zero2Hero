@@ -58,7 +58,7 @@ Let's begin! 🚀
 - Transfer Learning.
 - Generative Adversarial Networks (GANs).
 - Time Series Analysis.
-Natural Language Processing (NLP).
+- Natural Language Processing (NLP).
 ## 9- Conclusion
 - Recap of key concepts covered.
 - Importance of continuous learning in machine learning.
