@@ -13,7 +13,7 @@ Let's begin! 🚀
  3. Supervised Learning
  4. Unsupervised Learning
  5. Feature Engineering and Selection
- 6. Model Tuning and Optimization
+ 6. Model Evaluation and Selection
  7. Deployment and Productionization
  8. Advanced Topics
  9. Conclusion
