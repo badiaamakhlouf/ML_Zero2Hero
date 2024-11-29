@@ -61,6 +61,14 @@ Here is some advices :
 - and hence can help preventing model overfitting
 
 ## Improve the performance of a Machine learning algorithm
+- Several methods can be used to improve the performance of a machine learning model.
+- Each of these techniques can significantly impact the model's overall effectiveness.
+- Here are some common approaches:
+  - Feature Engineering: Enhance input data by creating new features or refining existing ones.
+  - Hyperparameter Tuning: Adjust model parameters to optimize performance.
+  - Regularization: Apply techniques like L2 or dropout to prevent overfitting.
+  - Ensemble Methods: Combine multiple models to achieve better accuracy.
+    
 - To decide how to improve the performance of a ml algorithm, it is possible to run some diagnostics.
 - Bias and Variance is the most powerful diagnostic.
 
@@ -71,7 +79,7 @@ Here is some advices :
 - It is important to find a good trade off between bias and variance to ensure that our algorithm perform very well.
 - For high bias: underfitting, performance is bad on all sets: training, validation and testing (J is high for all)
 - For high variance: overfit, performance is good ($J_{train}$ is low )on training but very bad (($J_{train}$ is high))on both validation and testing sets.
-- **Note:** $J_{cv}$ is always high than $J_{train}$, only in case of underfitting: J_{cv}≈J_{train}
+- **Note:** $J_{cv}$ is always high than $J_{train}$, only in case of underfitting: $J_{cv}≈J_{train}$
 - It is possible to habe high bias with high variance, but still $J_{cv}>>J_{train}$
   
 #### Regularization and bias/variance
@@ -82,10 +90,5 @@ Here is some advices :
 
 
 
-- Several methods can be used to improve the performance of a machine learning model.
-- Each of these techniques can significantly impact the model's overall effectiveness.
-- Here are some common approaches:
-  - Feature Engineering: Enhance input data by creating new features or refining existing ones.
-  - Hyperparameter Tuning: Adjust model parameters to optimize performance.
-  - Regularization: Apply techniques like L2 or dropout to prevent overfitting.
-  - Ensemble Methods: Combine multiple models to achieve better accuracy.
+
+
