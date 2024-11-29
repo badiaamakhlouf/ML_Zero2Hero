@@ -74,8 +74,6 @@ Here is some advices :
 
 ### Bias and Variance
 #### Diagnosing bias and variance 
-- High bias : underfit
-- High variance : 
 - It is important to find a good trade off between bias and variance to ensure that our algorithm perform very well.
 - For high bias: underfitting, performance is bad on all sets: training, validation and testing (J is high for all)
 - For high variance: overfit, performance is good ($J_{train}$ is low )on training but very bad (($J_{train}$ is high))on both validation and testing sets.
@@ -83,8 +81,29 @@ Here is some advices :
 - It is possible to habe high bias with high variance, but still $J_{cv}>>J_{train}$
   
 #### Regularization and bias/variance
+- Model hyperparameter can affect the bias and the variance in the used learning algorithm, such as the choice of regularisation parameter.
+- Example: $$RSS_{Lasso}= {RSS + Lasso penality\ term  = \sum_{i=1}^{n}(y_i -\hat y_i)^2} + λ \sum_{j=1}^{p}|\hat W_j| $$
+- λ is the regularisation parameter:
+    - If λ is large: High bias + underfit + large error on all sets
+    - If λ is small: High variance + overfit + large error on validation and testing sets
+    - Intermediate value is a good choice
+- It is important to perform an hyperparameter tuning step before applying the model such as evaluating the effect of various value of λ on the model performance (training and validation sets) then pick the best.
+- The good model is the one that has lower cross-validation error and lower training error.
+- Examples of model hyperparameter: polynomial degree, number of clusters, regularization parameters such as in L1 and L2, learning rate (η), number of layers/neurons etc.
+- To evaluate the error for various hyperparameter values, you can use grid search or random search method 
 
-#### Steps to Establish a Baseline Level of Performance
+#### How to establish a baseline level of performance
+- Image we are applying a ML model for object detection or image recognition: 
+   - If our model has as a training error 12% and a cross validation error 15%.
+   - However, the ground Truth which is in my case Human level performance has 11.7%.
+   - Then, it is impossible that our ml model will have better performance then HPL.
+- From our example it is clear that our model perform well as the difference between HPL and the Training error is almot 0.3%
+- The 3% error gab between training error and cross-validation error is due to the high variance (overfit).
+- If the error gab between the HLP and training error was large so in this case we have high bias (underfit).
+- If we have large gab between HLP/training and large gab between training/cross-validation error ==> high variance + high bias (never happen this case)
+- My ground truth can be HLP, previous algorithms or domain expert, this grund truth can be used to evaluate my model in case I have very noisy data and it is impossible to have very low error or null error.
+
+#### Define next steps in model evaluation and results diagnosis
 
 
 
