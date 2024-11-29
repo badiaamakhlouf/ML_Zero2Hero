@@ -32,7 +32,6 @@ Let's begin! 🚀
 - Regression: predicting continuous values.
 - Algorithms: Decision Trees, Linear Regression, Logistic Regression, k-Nearest Neighbors, Support Vector Machines, etc.
 - Evaluation metrics: accuracy, precision, recall, F1-score, etc.
-- Model evaluation and validation.
 ## 4- Unsupervised Learning
 - Introduction to unsupervised learning.
 - Clustering: grouping similar data points.
