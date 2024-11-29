@@ -65,6 +65,19 @@ Here is some advices :
 - Bias and Variance is the most powerful diagnostic.
 
 ### Bias and Variance
+#### Diagnosing bias and variance 
+- High bias : underfit
+- High variance : 
+- It is important to find a good trade off between bias and variance to ensure that our algorithm perform very well.
+- For high bias: underfitting, performance is bad on all sets: training, validation and testing (J is high for all)
+- For high variance: overfit, performance is good (J_{train} is low )on training but very bad ((J_{train} is high))on both validation and testing sets.
+- **Note:** J_{cv} is always high than J_{train}, only in case of underfitting: J_{cv}≈J_{train}
+- It is possible to habe high bias with high variance, but still J_{cv}>>J_{train}
+  
+#### Regularization and bias/variance
+
+#### Steps to Establish a Baseline Level of Performance
+
 
 
 
