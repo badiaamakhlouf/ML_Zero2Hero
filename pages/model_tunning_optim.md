@@ -102,8 +102,17 @@ Here is some advices :
 - If the error gab between the HLP and training error was large so in this case we have high bias (underfit).
 - If we have large gab between HLP/training and large gab between training/cross-validation error ==> high variance + high bias (never happen this case)
 - My ground truth can be HLP, previous algorithms or domain expert, this grund truth can be used to evaluate my model in case I have very noisy data and it is impossible to have very low error or null error.
-
-#### Define next steps in model evaluation and results diagnosis
+#### Learning curves
+- They are very important to uderstand how the model performance change in function of trained samples means during its learning phase.
+- Example: plot $J_{cv}$ in function of m(training set size)
+- If the training sets is very large, say 2500 then, it is possible to only select 100 samples the, plot the learning curve (the training error and cross-validation error) in function of these samples.
+- Again, train the model on 200 samples and plot the training error and cross-validation error. Then train the model on 300 samples etc.
+- One downside of the plotting learning curves is that this appraoch could be computationally quite expensive as different subset of data will be used each time to train the model.
+- So, we are goind to have various models especially is the training data set is very large, > 5000
+- If the learning algorithm suffers from high bias ==> collecting more training data will not resolve the problem.
+- If the learning alorithm suffers from high variance then, collecting more training data can help improve performance.
+  
+#### Define next steps to take 
 
 
 
