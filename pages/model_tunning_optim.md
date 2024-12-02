@@ -72,7 +72,7 @@ Here is some advices :
 - To decide how to improve the performance of a ml algorithm, it is possible to run some diagnostics.
 - Bias and Variance is the most powerful diagnostic.
 
-### Bias and Variance
+### Bias Variance tradeoff
 #### Diagnosing bias and variance 
 - It is important to find a good trade off between bias and variance to ensure that our algorithm perform very well.
 - For high bias: underfitting, performance is bad on all sets: training, validation and testing (J is high for all)
@@ -102,19 +102,60 @@ Here is some advices :
 - If the error gab between the HLP and training error was large so in this case we have high bias (underfit).
 - If we have large gab between HLP/training and large gab between training/cross-validation error ==> high variance + high bias (never happen this case)
 - My ground truth can be HLP, previous algorithms or domain expert, this grund truth can be used to evaluate my model in case I have very noisy data and it is impossible to have very low error or null error.
+  
 #### Learning curves
 - They are very important to uderstand how the model performance change in function of trained samples means during its learning phase.
 - Example: plot $J_{cv}$ in function of m(training set size)
 - If the training sets is very large, say 2500 then, it is possible to only select 100 samples the, plot the learning curve (the training error and cross-validation error) in function of these samples.
 - Again, train the model on 200 samples and plot the training error and cross-validation error. Then train the model on 300 samples etc.
 - One downside of the plotting learning curves is that this appraoch could be computationally quite expensive as different subset of data will be used each time to train the model.
-- So, we are goind to have various models especially is the training data set is very large, > 5000
+- So, we are goind to have various models especially is the training data set is very large > 5000
 - If the learning algorithm suffers from high bias ==> collecting more training data will not resolve the problem.
 - If the learning alorithm suffers from high variance then, collecting more training data can help improve performance.
-  
-#### Define next steps to take 
+  c#### Define next steps to take 
+- The first step is to identify if your algorithm has high bias or high variance.
+- After that, you can take a good decision about the next steps to be done in order to validate or improve the model.
+- Example: if the built model is giving very large errors in prediction, so what to do next?
+   - Increase the size of training samples
+   - Decrease the the features sets, high number of features gives a complex model.
+   - Finding new relevant features
+   - Adding polynomial features
+   - Try variying the hyperparameters
+- Each of the previous mentioned approach can help fixing either the problem of high bias or high variance.
+- **Case of high bias:** here are the three techniques that helps fix this problem : 
+   - Finding new relevant features that helps predict the target variable and without them we can not reach good performance.
+   - Adding polynomial features, adding additional polynomial features can help in getting better performance on the training set.
+   - Varying huperparameters such as decreasing λ in regularized linear regression problem
+ 
+- **Case of high variance:**  here are the three techniques that helps fix this problem : 
+   - Get more training examples
+   - Decrease the the features sets helps to reduce the flexibility of the model to overfit
+   - Varying huperparameters such as increasing λ to fit a high variance problem
+- If the algorithm has high variance then either get more training data or simplify the model means reduce the features set or increase regularisation parameter λ.
+- If the algorithm has high bias which means bad performance even on training data. Then, to fix this either make the model more powerful and give more flexibility to build more complex model. To do that, we can use more features such as ploynomial features or decrease the regularisation parameter Lamdba. Reducing the training data size will not help.
+- High bias and high variance concepts are straightforward to understand theoretically but challenging to apply and master in practice.
+- Simple model==> high bias
+- Complex model ==> High variance
 
-
+#### In Neural networks
+- Neural networks help in addressing both high bias and high variance smoothly.
+- Large neural networks are low bias machines, if the neural network is large enough then it is possible to get good performance.
+- In case you trained a neural network model, evaluate its performance on training set and if the error is high then try bigger network.
+- In case the trained model has good performance on the training set, check its performance on the cross validation set and if it does not do very well (large error) then try to fix it via getting more data.
+- After getting more data evaluate again the found model to check if it has high bias and high variance.
+- If the model has low bias and low variance means good performance on both training and cross-validation sets.
+- To train a large neural network, it is possible to use GPU (or graphical processing) as they become computationally expensive.
+- If we have very large data and very large neural network then it is possible to take very long time to train our model even with GPU.
+- To fix high bias, you might expand your model, but this can cause high variance, needing more data.
+- However, it is not possible to increase the size of the dataset anytime you want.
+- A large NN will usually with well chosen regularisation will do as well or better than a smaller one.
+- Using a larger neural network is often beneficial, but it may be computationally expensive. ==> long training time and inference process.
+- Formula for regularised error in Neural Network: $$J_{regularized}=J+λ⋅Ω$$
+    - J: The standard loss function (e.g., Mean Squared Error, Cross-Entropy Loss)
+    - λ: The regularization parameter that controls the trade-off between the loss and the regularization term.
+    - Ω: The regularization term, which is typically a norm of the weights. Common choices include:
+       - L2 Regularization (Ridge): $Ω=1/2(\sum_{i=1}W_i^{2})$
+       - L1 Regularization (Lasso): $Ω=\sum_{i=1}|W_i|$
 
 
 
