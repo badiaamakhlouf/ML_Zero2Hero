@@ -150,6 +150,7 @@ Here is some advices :
 - However, it is not possible to increase the size of the dataset anytime you want.
 - A large NN will usually with well chosen regularisation will do as well or better than a smaller one.
 - Using a larger neural network is often beneficial, but it may be computationally expensive. ==> long training time and inference process.
+- When training neural networks, variance issues are often more common than bias, especially with sufficiently large networks.
 
 ###### New cost function
 - Formula for regularised error in Neural Network: $$J_{regularized}=J+λ⋅Ω$$
@@ -158,11 +159,13 @@ Here is some advices :
     - Ω: The regularization term, which is typically a norm of the weights. Common choices include:
        - L2 Regularization (Ridge): $Ω={1\over2}\sum_{i}W_i^{2}$
        - L1 Regularization (Lasso): $Ω=\sum_{i}|W_i|$
+         
  
 ###### Some code examples : 
 - `tf.keras.layers.Dense(32, kernel_regularizer='l2')`
-- `tf.keras.layers.Dense(32, kernel_regularizer=l2(0.01), bias_regularizer=l2(0.01))
+- `tf.keras.layers.Dense(32, kernel_regularizer=l2(0.01), bias_regularizer=l2(0.01))`
 - `model.add(Dense(64, input_dim=64, kernel_regularizer=regularizers.l2(0.01)))`
+- 0.01 correspond to the value of λ⋅
 
 
 
