@@ -154,7 +154,7 @@ Here is some advices :
     - J: The standard loss function (e.g., Mean Squared Error, Cross-Entropy Loss)
     - λ: The regularization parameter that controls the trade-off between the loss and the regularization term.
     - Ω: The regularization term, which is typically a norm of the weights. Common choices include:
-       - L2 Regularization (Ridge): $Ω=1\/2(\sum_{i}W_i^{2})$
+       - L2 Regularization (Ridge): $Ω=1\over2(\sum_{i}W_i^{2})$
        - L1 Regularization (Lasso): $Ω=\sum_{i}|W_i|$
 
 
