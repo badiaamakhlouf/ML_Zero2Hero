@@ -60,7 +60,7 @@ Let's begin! 🚀
 - Model deployment strategies: cloud platforms, containers, APIs.
 - Monitoring and updating deployed models.
 - Considerations for scalability and performance.
-## [8- The Machine Learning Development Process](pages/deploying_ml_model.md)
+## [8- The Machine Learning Development Process](pages/ml_devlopment_process.md)
 - End-to-end workflows: data collection to deployment.
 - Team collaboration and methodologies.
 ## [9- Advanced Topics in Machine Learning](pages/advanced_topics.md)
