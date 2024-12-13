@@ -5,5 +5,102 @@
 ![Last Updated](https://img.shields.io/badge/last%20updated-July%202024-brightgreen)
 ![Contributions Welcome](https://img.shields.io/badge/contributions-welcome-orange.svg)
 ![Maintained](https://img.shields.io/badge/maintained-yes-blue.svg)
+# Decision trees and tree ensembles 
+### 1- What is a decision tree
+- Decision trees are versatile models used in supervised learning, applicable to both classification and regression tasks.
+- The training set is used to build the decision tree, while the testing set evaluates its performance.
+- Decision trees are often viewed as linear models, where:
+  - x represents the input features.
+  - y (the target) can be either:
+    - Continuous (e.g., temperature).
+    - Categorical (e.g., low, medium, high).
+- Features (x) can be numeric or categorical and categorical features must be encoded (e.g., one-hot encoding) before being used.
+- For any given application, multiple decision tree models can be constructed.
+- Choosing the optimal tree involves selecting an algorithm that learns the most appropriate tree from the training data.
+- Factors like splitting criteria (e.g., Gini impurity, entropy) and tree depth play a key role in defining the tree’s effectiveness and generalizability.
 
-# Decision Trees 
+### 2- Structure of decision tree 
+- A decision tree consists of:
+  - Root Node: the starting point that represents the first decision based on the dataset.
+  - Decision Nodes: intermediate nodes where splits occur based on feature values.
+  - Leaf Nodes: terminal nodes that provide the final prediction (a category or value).
+  - Depth: is the maximum number of edges from the root node to the farthest leaf node in a decision tree.
+
+### 3- Learning process 
+- Here is a step by step guide to build a decision tree 
+1. Understand the Problem: define the goal (e.g., classification or regression) and understand the dataset and identify the target variable.
+2. Prepare the Dataset:
+  - Clean the data via handle missing values, outliers, and duplicate data
+  - Perform some feature engineering such as select relevant features or encode categorical variables if necessary.
+  - Split the dataset into training and testing sets.
+3. Choose a Splitting Criterion:
+  - For Classification: use metrics like Gini Impurity or Information Gain (Entropy).
+  - For Regression: use metrics like Mean Squared Error (MSE) or Variance Reduction.
+4. Start with the Root Node: evaluate all features to find the one that best splits the data (i.e., minimizes impurity or maximizes information gain).
+5. Iterative Splitting:
+- **Recursive Process:** For each child node:
+  - Split the data based on the chosen feature and criterion.
+  - Repeat the process for each subset.
+- **Stop when a condition is met**, such as:
+  - Maximum depth is reached.
+  - Minimum number of samples per leaf is met.
+  - All samples in a node belong to the same class (pure node).
+  - Further splits no longer improve the model significantly.
+6. Handle Overfitting:
+- **Pruning:** remove branches with low significance using techniques like post-pruning or pre-pruning.
+- Set constraints such as:
+  - Maximum tree depth.
+  - Minimum samples per leaf or split.
+7. **Validate the Model:** use cross-validation to assess the decision tree’s performance and generalizability.
+8. **Test the Tree:**
+  - Evaluate the decision tree using unseen test data.
+  - Calculate metrics like accuracy, precision, recall (for classification), or RMSE (for regression).
+
+### 4- Key Decisions in Splitting a Decision Tree
+When building a decision tree, careful consideration of splitting criteria is essential to ensure the tree is effective, interpretable, and avoids overfitting. Here are the key decisions to address:
+#### 4.1- Selecting the Feature to Split On
+- How to choose the feature?
+  - Prioritize features that maximize purity (homogeneity of data within nodes).
+  - Minimize impurity using measures like:
+    - Gini Impurity
+    - Entropy (used in Information Gain)
+      
+#### 4.2- Stopping Criteria for Splitting
+- When should splitting stop?
+  - When a node is 100% pure (all examples belong to a single class).
+  - When further splitting would result in the tree exceeding a specified maximum depth.
+  - When improvements in the purity score (e.g., Gini, Information Gain) fall below a defined threshold.
+  - When the number of examples in a node drops below a minimum threshold (prevents over-segmentation).
+
+#### 4.3- Managing Tree Size to Avoid Overfitting
+- Why control tree size?
+  - An excessively large tree risks **overfitting**, meaning it performs well on the training data but poorly on unseen data.
+  - Techniques to control size:
+    - **Pruning:** Remove nodes that add minimal value.
+    - Set limits on tree **depth** or **minimum samples per split**.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
