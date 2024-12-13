@@ -24,9 +24,16 @@
 - During this step, we evaluate diagnostics such as the bias-variance tradeoff and perform error analysis to assess the results.
 - Based on the investigation, we determine whether the model's performance is satisfactory or if further improvements are needed.
 - Diagnostics guide the next steps, helping us decide whether to accept the current results, add more data, modify features, or adjust the model architecture etc.
-- Actually, performing different diagnostics helps to give various guidance on what choices for the model or data, or other parts of the architecture could be most promising to try. 
+- Actually, performing different diagnostics helps to give various guidance on what choices for the model or data, or other parts of the architecture could be most promising to try.
+
+### 3.1- Diagnosing bias and variance 
+- It is important to find a good trade off between bias and variance to ensure that our algorithm perform very well.
+- For high bias: underfitting, performance is bad on all sets: training, validation and testing (J is high for all)
+- For high variance: overfit, performance is good ($J_{train}$ is low )on training but very bad (($J_{train}$ is high))on both validation and testing sets.
+- **Note:** $J_{cv}$ is always high than $J_{train}$, only in case of underfitting: $J_{cv}≈J_{train}$
+- It is possible to habe high bias with high variance, but still $J_{cv}>>J_{train}$
   
-### 3.1- Error analysis 
+### 3.2- Error analysis 
 - For result analysis, start with a bias-variance diagnostic, followed by error analysis in the next round.
 - In classification problems, for example:
   - Review misclassified samples or incorrect predictions to understand why the algorithm made mistakes.
@@ -85,19 +92,80 @@
   - By reusing these pre-trained layers, the model benefits from prior learning, even if the target task is significantly different.
   - Fine-tuning the later layers enables the network to specialize for the new task.
 
-
-
-
-
-
-
-
-
-
-
-
-
 ## 5- ML project full cycle 
+- Here are the list of steps to think about when we build a ML project:
+  - Scope project: define the problem and the goal
+  - Data collection: define and collect required data
+  - Model training : training, error analysis and iterative improvment
+  - Deploy in production: deploy, monitor and maintain system
+- During model training, if the model performance was very poor so in this case we can go back to step 2 and perform data preprocessing or collect more data.
+- Again, in case the deployed model gave some errors during monitoring, we can go back to either data collection step or model training.
+
+## 6- Ethical Considerations in ML Systems
+Building machine learning (ML) systems requires careful consideration of ethical implications to ensure fairness, reduce bias, and prevent harm. Below are key guidelines and considerations for an ethical approach:
+
+### 6.1- Prioritize Fairness and Minimize Bias
+- The primary goal is to create an ML system that is fair and free from unreasonable bias.
+- Unfortunately, some ML systems exhibit unacceptable levels of bias, leading to discriminatory outcomes.
+- Examples of Bias in ML Systems:
+  - Hiring tools that discriminate against women.
+  - Facial recognition systems misidentifying individuals with darker skin as criminals.
+  - Biased bank loan approval processes.
+
+### 6.2- Recognize Adverse Use Cases
+- ML systems can have harmful applications, including:
+  - Deepfakes used to spread misinformation or for malicious purposes.
+  - Generating fake content for political or commercial exploitation.
+  - Creating harmful products or tools.
+ 
+### 6.3- Engage in Ethical Pre-Build Practices
+- Assemble a diverse team to identify potential risks and brainstorm potential harms, especially to vulnerable groups.
+- Conduct a literature review of industry standards and ethical guidelines relevant to the application.
+- Identify and address ethical challenges early to prevent harm and ensure system reliability.
+
+### 6.4- Audit and Test for Bias
+- **Pre-deployment Audits:**
+  - After the training phase, evaluate the system for potential bias against specific genders, ethnicities, or other subgroups.
+  - Conduct rigorous testing to identify and address any issues before deployment.
+
+- **Post-deployment Monitoring:**
+  - Continuously monitor the system for unintended harm or biases.
+  - Develop and implement mitigation strategies where necessary.
+
+### 6.5- Prepare a Mitigation Plan
+- Develop a contingency plan to address unexpected problems after deployment.
+- A simple and effective mitigation strategy is to **roll back to a previously trusted system**.
+  - This ensures operations can continue smoothly while issues are resolved.
+    
+By following these steps, organizations can ensure their ML systems are ethical, reliable, and beneficial for all users.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
