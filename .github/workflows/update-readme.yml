@@ -19,7 +19,8 @@ jobs:
 
       - name: Update README.md
         run: |
-          sed -i "s/\[Last Updated\](.*)/\[Last Updated\](https:\/\/img.shields.io\/badge\/last%20updated-${{ env.LAST_COMMIT_DATE// /%20}}-brightgreen)/" README.md
+          NEW_DATE=$(echo "${{ env.LAST_COMMIT_DATE }}" | sed 's/ /%20/g')
+          sed -i "s/\[Last Updated\](.*)/\[Last Updated\](https:\/\/img.shields.io\/badge\/last%20updated-${NEW_DATE}-brightgreen)/" README.md
 
       - name: Configure Git
         run: |
