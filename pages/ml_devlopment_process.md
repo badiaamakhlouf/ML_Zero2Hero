@@ -69,7 +69,8 @@ Based on the analysis, decide the course of action:
 - Data synthesis is a technique where entirely new examples are created from scratch, rather than modifying existing ones.
 - Synthetic data generation has been widely used in computer vision tasks but less frequently in other applications.
 - In conclusion, it’s crucial to carefully engineer the data used by our machine learning system.
-- A $ML/AI system = Data + Code (algorithm/model)$. To enhance the system, you must not only improve the code but also the data.
+- $$ML/AI system = Data + Code (algorithm/model)$$.
+- To enhance the system, you must not only improve the code but also the data.
 - Focusing on improving the code is known as a conventional model-centric approach, while focusing on data engineering is referred to as a data-centric approach.
 
 ### 4.2- Trasfert learning: using data from a different task
