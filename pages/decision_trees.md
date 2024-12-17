@@ -27,7 +27,7 @@
   - Depth: is the maximum number of edges from the root node to the farthest leaf node in a decision tree.
 
 ### 3- Learning process 
-- Here is a step by step guide to build a decision tree 
+Here is a step by step guide to build a decision tree 
 1. Understand the Problem: define the goal (e.g., classification or regression) and understand the dataset and identify the target variable.
 2. Prepare the Dataset:
   - Clean the data via handle missing values, outliers, and duplicate data
@@ -78,7 +78,19 @@ When building a decision tree, careful consideration of splitting criteria is es
   - Techniques to control size:
     - **Pruning:** Remove nodes that add minimal value.
     - Set limits on tree **depth** or **minimum samples per split**.
+   
+### 5- Decision tree learning
+#### 5.1- Measuring purity
+- Entropy is a measure of the impurity or uncertainty in a dataset.
+- The entropy function is denoted as H(p), where p represents the probability or fraction of examples with a specific characteristic (e.g., temperature > 70°C, or the data corresponds to "dogs").
+- If the entropy is high, it indicates that the impurity (or randomness) of the dataset is high, meaning the data is more mixed and less homogeneous.
+- Conversely, lower entropy implies greater purity, where examples are more uniform.
 
+#### 5.2- Choosing a split: Information Gain
+- To determine which feature to use for splitting at the root node, we calculate the **weighted average of entropy** across all possible splits, not just the raw entropy.
+- The feature that results in the largest reduction in entropy is selected for the split.
+- This reduction in entropy is known as Information Gain: $Information \Gain= Entropy_{root} - weighted average of entropy$
+- Information Gain serves as a metric to identify the feature that best separates the data and should be used for splitting at each node.
 
 
 
