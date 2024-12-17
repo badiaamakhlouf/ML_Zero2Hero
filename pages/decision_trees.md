@@ -89,7 +89,7 @@ When building a decision tree, careful consideration of splitting criteria is es
 #### 5.2- Choosing a split: Information Gain
 - To determine which feature to use for splitting at the root node, we calculate the **weighted average of entropy** across all possible splits, not just the raw entropy.
 - The feature that results in the largest reduction in entropy is selected for the split.
-- This reduction in entropy is known as Information Gain: $Information \Gain= Entropy_{root} - weighted average of entropy$
+- This reduction in entropy is known as Information Gain: $Information \ Gain= Entropy_{root} - weighted average of entropy$
 - Information Gain serves as a metric to identify the feature that best separates the data and should be used for splitting at each node.
 
 
