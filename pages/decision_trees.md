@@ -87,10 +87,23 @@ When building a decision tree, careful consideration of splitting criteria is es
 - Conversely, lower entropy implies greater purity, where examples are more uniform.
 
 #### 5.2- Choosing a split: Information Gain
+- Start with all examples at the root node
 - To determine which feature to use for splitting at the root node, we calculate the **weighted average of entropy** across all possible splits, not just the raw entropy.
 - The feature that results in the largest reduction in entropy is selected for the split.
 - This reduction in entropy is known as Information Gain: $Information \ Gain= Entropy_{root} - weighted\ average\ of\ entropy$
 - Information Gain serves as a metric to identify the feature that best separates the data and should be used for splitting at each node.
+- Information Gain must be calculated for all possible features, then we pick the ones with the highest value
+- Split the dataset according to the selected feature and create left and right branches of the tree.
+- keep repeating splitting process (on left and right branches) until stoping criteria is met :
+  - When a node is 100% one class
+  - When splitting a node will result in the tree exceeding a maximum deepth
+  - Information Gain from additional splits is less than threshold
+  - Number of examples if a node is below a threshold
+- This repeatetive process is called recurisive algorithm 
+
+#### 5.3- Features in Decision trees
+- Unfortunately, decision trees do not natively handle categorical features; they require all input features to be numerical.
+- To address this, encoding techniques such as one-hot encoding can be used to convert categorical features into numerical representations, ensuring compatibility with the decision tree model.
 
 
 
