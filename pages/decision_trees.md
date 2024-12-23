@@ -12,8 +12,8 @@
 - Decision trees are often viewed as linear models, where:
   - x represents the input features.
   - y (the target) can be either:
-    - Continuous (e.g., temperature).
-    - Categorical (e.g., low, medium, high).
+    - Continuous (e.g., temperature). ==> Regression tree
+    - Categorical (e.g., low, medium, high). ==> Decision tree
 - Features (x) can be numeric or categorical and categorical features must be encoded (e.g., one-hot encoding) before being used.
 - For any given application, multiple decision tree models can be constructed.
 - Choosing the optimal tree involves selecting an algorithm that learns the most appropriate tree from the training data.
@@ -107,6 +107,9 @@ When building a decision tree, careful consideration of splitting criteria is es
  ensuring compatibility with the decision tree model.
 - For numerical features, we determine a threshold to split the data, calculate the information gain for each potential threshold,
  and select the threshold that yields the highest information gain.
+#### 5.4- Regression Decision tree
+- To split data in a regression decision tree, calculate the reduction in variance between the raw data and the data after the split.
+- Evaluate all feature options for splitting, select the one with the highest variance reduction, and repeat the process for the left and right nodes until stopping criteria are met.
 
 
 
