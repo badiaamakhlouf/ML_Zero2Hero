@@ -103,7 +103,10 @@ When building a decision tree, careful consideration of splitting criteria is es
 
 #### 5.3- Features in Decision trees
 - Unfortunately, decision trees do not natively handle categorical features; they require all input features to be numerical.
-- To address this, encoding techniques such as one-hot encoding can be used to convert categorical features into numerical representations, ensuring compatibility with the decision tree model.
+- To address this, encoding techniques such as one-hot encoding can be used to convert categorical features into numerical representations,
+ ensuring compatibility with the decision tree model.
+- For numerical features, we determine a threshold to split the data, calculate the information gain for each potential threshold,
+ and select the threshold that yields the highest information gain.
 
 
 
