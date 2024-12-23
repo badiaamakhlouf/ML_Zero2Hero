@@ -111,6 +111,13 @@ When building a decision tree, careful consideration of splitting criteria is es
 - To split data in a regression decision tree, calculate the reduction in variance between the raw data and the data after the split.
 - Evaluate all feature options for splitting, select the one with the highest variance reduction, and repeat the process for the left and right nodes until stopping criteria are met.
 
+### 6- Tree ensembles
+- A single decision tree can sometimes perform poorly as it is highly sensitive to small changes in the data.
+- Using multiple decision trees in an ensemble helps make the algorithm less sensitive and more robust.
+- The idea behind tree ensembles is that by combining the outputs of many decision trees through voting, the overall algorithm becomes less influenced by the behavior of any single tree.
+- To construct a tree ensemble, a technique called sampling with replacement (bagging) is often used.
+- Common algorithms that utilize tree ensembles include Random Forest and XGBoost.
+
 
 
 
