@@ -117,7 +117,36 @@ When building a decision tree, careful consideration of splitting criteria is es
 - The idea behind tree ensembles is that by combining the outputs of many decision trees through voting, the overall algorithm becomes less influenced by the behavior of any single tree.
 - To construct a tree ensemble, a technique called sampling with replacement (bagging) is often used.
 - Common algorithms that utilize tree ensembles include Random Forest and XGBoost.
+#### 6.1- Random Forest
+- For a training set with 𝑛 samples, we use **sampling with replacement** to create a new training set of size 𝑚
+- A decision tree is then trained on this new dataset.
+- At each node, when selecting a feature to split on, if there are 𝑛 features available, we randomly select
+ a subset of 𝑘< 𝑛 features, and the algorithm can only choose from this subset.
+- If 𝑛 is very large, a good choice for 𝑘 is typically 𝑘 =\sqrt(𝑛)
+- The sampling with replacement process introduces variability in the data, allowing the algorithm to explore numerous small variations.
+- By training multiple decision trees on these modified datasets and averaging their outputs, the ensemble becomes more robust and less sensitive to individual data changes.
 
+#### 6.2- XGBoost 
+- For a training set of size 𝑚, use sampling with replacement to create a new training set of the same size.
+- Instead of sampling uniformly with 1/𝑚 probability, prioritize misclassified examples from previously trained trees.
+- Train a decision tree on this new dataset.
+- XGBoost (eXtreme Gradient Boosting) is an open-source implementation of boosted trees known for its speed and efficiency.
+- It often outperforms Random Forest in certain cases and is suitable for both classification and regression tasks.
+- XGBoost includes well-chosen default splitting criteria, effective stopping conditions, and built-in regularization to prevent overfitting.
+
+### Conclusion
+- Tree ensembles and neural networks are very powerful and very effective learning algorithms
+- Decision trees and tree ensembles :
+  - Works well on tabular (structured) data and not recommended for unstructured data such as images, audio, text
+  - Fast to train
+  - small decision trees may be human interpretable
+- Neural networks:
+  - Works well on all types of data, including tabular (structured) and unstructured data and mixed data
+  - Very good performance with unstructired data
+  - They are very slower in training
+  - Works with transfert learning
+  - When building a system of multiple models working together, it might be easier to string together multiple neural networks  
+  
 
 
 
