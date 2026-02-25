@@ -11,7 +11,7 @@
  9. Advanced Topics in Machine Learning
  10. Conclusion
 
-## [1- What is Machine Learning and Why It Matters](pages/introduction_to_ml.md)
+## [1- What is Machine Learning and Why It Matters](introduction_to_ml.md)
 - What is machine learning?
 - Why is machine learning important?
 - Basic concepts and terminology (e.g., algorithms, models, predictions).
