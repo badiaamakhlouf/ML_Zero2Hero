@@ -15,7 +15,7 @@
 - What is machine learning?
 - Why is machine learning important?
 - Basic concepts and terminology (e.g., algorithms, models, predictions).
-## [2- Key Concepts and Building Blocks of ML](pages/key_concepts.md)
+## [2- Key Concepts and Building Blocks of ML](key_concepts.md)
 - Algorithms, data (types, sources, and formats), and modeling.
 - Importance of data quality and preprocessing:
    - Data preprocessing: cleaning, normalization, and feature engineering.
